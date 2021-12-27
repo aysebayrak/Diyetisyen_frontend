@@ -1,0 +1,34 @@
+
+
+	  
+<body class="text-center">
+    <main class="form-signin">
+        <form [formGroup]="registerForm"> 
+          <h1 class="h3 mb-3 fw-normal">Kayıt ol</h1>
+      
+          <div class="form-floating mt-4">
+            <input formControlName="firstName" type="firstName" class="form-control" id="floatingInput" placeholder="firstName" >
+            <label for="floatingInput">Ad</label>
+          </div>
+          <div class="form-floating mt-4">
+            <input formControlName="lastName" type="lastName" class="form-control" id="floatingInput" placeholder="lastName" >
+            <label for="floatingInput">Soyad</label>
+          </div>
+          <div class="form-floating mt-4">
+            <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">E-posta</label>
+          </div>
+          <div class="form-floating mt-4">
+            <input  type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Şifre</label>
+          </div>
+      
+        
+          <a href="#" routerLink="/login" class="text-warning">Zaten bir hesabın var mı?</a>
+          <br>
+          <br>
+          <button (click)="register()" style="background-color: #212121" class="w-100 btn btn-lg btn-success">Kayıt Ol</button>
+          
+        </form>
+      </main>
+        </body>

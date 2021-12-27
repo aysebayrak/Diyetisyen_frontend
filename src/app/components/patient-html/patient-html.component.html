@@ -1,0 +1,22 @@
+<div class="container col-md-4 mt-5 ">
+ 
+    <button class="btn btn-warning" type="button">HTML RAPOR</button>
+   <ul *ngIf="patientDto" class="list-group list-group-flush">
+       <li>HASTANIN KİŞİSEL BİLGİLERİ</li>
+       <li class="list-group-item">HASTANIN ADI: {{patientDto.firstName }}</li>
+       <li class="list-group-item">HASTANIN SOYADI: {{patientDto.lastName }}</li>
+       <li class="list-group-item">HASTANIN KİMLİK BİLGİSİ: {{patientDto.tc }}</li>
+       <li class="list-group-item">HASTANIN BOYU: {{patientDto.size }}</li>
+       <li class="list-group-item">HASTANIN KİLO BİLGİSİ: {{patientDto.weight}}</li>
+       <li class="list-group-item">HASTANIN YAŞ BİLGİSİ: {{patientDto.age }}</li>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <li>HASTANIN DİYET BİLGİLERİ</li>
+       <li class="list-group-item">HASTALIK ADI: {{patientDto.diseaseName }}</li>
+       <li class="list-group-item">HASTAYA VERİLEN DİYET BİLGİSİ: {{patientDto.dietName }}</li>
+   </ul>
+    
+</div>

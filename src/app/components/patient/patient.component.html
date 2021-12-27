@@ -1,0 +1,71 @@
+<div class="d-grid gap-2 mt-5">
+    <button class="btn btn-warning" type="button">HASTALAR</button>
+
+  </div>
+
+
+<table  class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Hasta   Tc</th>
+            <th scope="col">Hasta  İsmi</th>
+            <th scope="col">Hasta  Soyismi</th>
+            <th scope="col">Hasta  Yaş  </th>
+            <th scope="col">Hasta   Ağırlık</th>
+            <th scope="col">Hasta   Boy</th>
+
+
+            <th></th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let patient of patients">
+            <th scope="row">{{ patient.tc }}</th>
+            <td>{{ patient.firstName }}</td>
+            <td>{{ patient.lastName }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.weight }}</td>
+            <td>{{ patient.size }}</td>
+
+            <td>
+                <div class="d-flex justify-content-center">
+                    <button
+                    type="button"
+                    class="btn btn-outline-success"
+                    style="margin-right: 5px"
+                    routerLink="/patients/detail/{{ patient.patientId }}"
+                  >
+                    Rapor JSON
+                  </button>
+
+                  <button
+                  type="button"
+                  class="btn btn-outline-danger"
+                  style="margin-right: 5px"
+                  routerLink="/patients/html/{{ patient.patientId }}"
+                >
+                  Rapor HTML
+                </button>
+                <button
+                type="button"
+                class="btn btn-outline-warning"
+                style="margin-right: 5px"
+                routerLink="/patients/update/{{ patient.patientId }}"
+              >
+                Güncelle
+              </button>
+                  <!-- <button class="btn btn-outline-danger" (click)="delete(disease)">
+
+                  </button>  -->
+                </div>
+            </td>
+          </tr>
+
+
+
+    </tbody>
+
+</table>
+

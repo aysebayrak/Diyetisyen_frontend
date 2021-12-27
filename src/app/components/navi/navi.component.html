@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#" style="color:coral">DİYETİM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="#" routerLink="doctors/add">Doktor Ekle</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="#" routerLink="doctors/list">Doktorlar</a>
+        </li>
+        <!-- <li class="nav-item ">
+          <a class="nav-link active" aria-current="page"  href="#" routerLink="patients/add">Hasta Ekle</a>
+        </li> -->
+        <!-- <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="#">Hastalıklar</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page"  href="#" routerLink="diseases/add">Hastalık Ekle</a>
+        </li> -->
+
+
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Hasta İşlemleri
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item"   href="#" routerLink="patients">Hastalar</a></li>
+           <!-- <li><a class="nav-link active" aria-current="page"  href="#" routerLink="patients/add">Hasta Ekle</a></li>-->
+           <li><a class="dropdown-item" aria-current="page"  href="#" routerLink="patients/add">Hasta Ekle</a></li>
+
+            <!-- <li><a class="dropdown-item" href="#" routerLink="diets/update">Diyet Güncelle</a></li> -->
+            <li><hr class="dropdown-divider"></li>
+          <!--<li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Diyet İşlemleri
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item "   href="#" routerLink="diets/list">Diyetler</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="diets/add">Diyet Ekle</a></li>
+            <!-- <li><a class="dropdown-item" href="#" routerLink="diets/update">Diyet Güncelle</a></li> -->
+            <li><hr class="dropdown-divider"></li>
+          <!--<li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Hastalık İşlemleri
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#" routerLink="diseases/list">Hastalıklar</a></li>
+            <li><a class="dropdown-item" href="#"  routerLink="diseases/add">Hastalık Ekle</a></li>
+            <li><hr class="dropdown-divider"></li>
+          <!--<li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          </ul>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Raporlar
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#" routerLink="patients/detail/{{patient.patientId}}">Rapor JSON</a></li>
+            <li><a class="dropdown-item" href="#"  routerLink="diseases/add">Rapor HTML</a></li>
+            <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+
+
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-warning"  routerLink="login" type="submit">GİRİŞYAP</button><br>
+        <button class="btn btn-outline-warning" routerLink="register" type="submit">KAYITOL</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+

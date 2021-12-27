@@ -1,0 +1,23 @@
+
+<div class="container col-md-4 mt-5 ">
+ 
+    <button class="btn btn-warning" type="button">JSON RAPOR</button>
+   <ul *ngIf="patientDto" class="list-group list-group-flush">
+       <li>HASTANIN KİŞİSEL BİLGİLERİ</li>
+       <li class="list-group-item">HASTANIN ADI: {{patientDto.firstName |json}}</li>
+       <li class="list-group-item">HASTANIN SOYADI: {{patientDto.lastName |json}}</li>
+       <li class="list-group-item">HASTANIN KİMLİK BİLGİSİ: {{patientDto.tc |json}}</li>
+       <li class="list-group-item">HASTANIN BOYU: {{patientDto.size |json}}</li>
+       <li class="list-group-item">HASTANIN KİLO BİLGİSİ: {{patientDto.weight |json}}</li>
+       <li class="list-group-item">HASTANIN YAŞ BİLGİSİ: {{patientDto.age |json}}</li>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <li>HASTANIN DİYET BİLGİLERİ</li>
+       <li class="list-group-item">HASTALIK ADI: {{patientDto.diseaseName |json}}</li>
+       <li class="list-group-item">HASTAYA VERİLEN DİYET BİLGİSİ: {{patientDto.dietName |json}}</li>
+   </ul>
+    
+</div>

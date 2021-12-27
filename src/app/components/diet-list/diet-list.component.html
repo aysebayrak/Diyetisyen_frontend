@@ -1,0 +1,41 @@
+
+<div class="d-grid gap-2 mt-5 ">
+  <button class="btn btn-warning" type="button">DİYETLER</button>
+  
+</div>
+<table  class="table table-hover">
+  <thead>
+      <tr>
+          <th scope="col">Diyet Numara</th>
+          <th scope="col">Diyet İsmi</th>
+          <th></th>
+      </tr>
+     
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let diet of diets">
+          <th scope="row">{{ diet.dietId }}</th>
+          <td>{{ diet.dietName }}</td>
+          <td>
+              <div class="d-flex justify-content-center">
+                  <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  style="margin-right: 5px"
+                  routerLink="/diets/update/{{ diet.dietId }}"
+                >
+                  Güncelle
+                </button>
+                <button class="btn btn-outline-danger" (click)="delete(diet)">
+                  Sil
+                </button> 
+              </div>
+          </td>
+        </tr>  
+
+      
+
+  </tbody>
+
+</table>

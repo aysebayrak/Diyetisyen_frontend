@@ -1,0 +1,43 @@
+
+<div class="d-grid gap-2 mt-5">
+    <button class="btn btn-warning" type="button">HASTALIKLAR</button>
+    
+  </div>
+
+
+<table  class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Hastalık Numara</th>
+            <th scope="col">Hastalık İsmi</th>
+            <th></th>
+        </tr>
+       
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let disease of diseases">
+            <th scope="row">{{ disease.diseaseId }}</th>
+            <td>{{ disease.diseaseName }}</td>
+            <td>
+                <div class="d-flex justify-content-center">
+                    <button
+                    type="button"
+                    class="btn btn-outline-success"
+                    style="margin-right: 5px"
+                    routerLink="/diseases/update/{{ disease.diseaseId }}"
+                  >
+                    Güncelle
+                  </button>
+                  <button class="btn btn-outline-danger" (click)="delete(disease)">
+                    Sil
+                  </button> 
+                </div>
+            </td>
+          </tr>  
+
+        
+
+    </tbody>
+
+</table>

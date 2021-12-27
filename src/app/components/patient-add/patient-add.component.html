@@ -1,0 +1,106 @@
+
+
+<div class="content mt-5 "  >
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header 	text-danger" >
+                <h5>HASTA EKLE</h5>
+
+            </div>
+            <div class="card-body">
+                <form [formGroup] ="patientAddForm">
+                    <div class ="mb-3  	text-danger">
+                        <label  for ="firstName">AD</label>
+                        <div class="form-group">
+                            <input type="text" id="firstName" formControlName="firstName" class="form-control"
+                            placeholder="isminizi giriniz.." />
+
+                        </div>
+
+                    </div>
+                    <div class ="mb-3 	text-danger">
+                        <label  for ="lastName">SOYAD</label>
+                        <div class="form-group">
+                            <input type="text" id="lastName" formControlName="lastName" class="form-control"
+                            placeholder="soyisim giriniz.." />
+
+                        </div>
+
+                    </div>
+
+                    <div class ="mb-3 	text-danger">
+                        <label  for ="tc">TC</label>
+                        <div class="form-group">
+                            <input type="text" id="tc" formControlName="tc" class="form-control"
+                            placeholder="kimlik bilginizi giriniz.." />
+
+                        </div>
+
+                    </div>
+                    <div class ="mb-3 	text-danger">
+                        <label  for =" salary">BOY</label>
+                        <div class="form-group">
+                            <input type="text" id="size" formControlName="size" class="form-control"
+                            placeholder="boy .." />
+
+                        </div>
+
+                    </div>
+
+                    <div class ="mb-3 	text-danger">
+                        <label  for ="age">YAŞ</label>
+                        <div class="form-group">
+                            <input type="text" id="age" formControlName="age" class="form-control"
+                            placeholder="yaş .." />
+
+                        </div>
+
+                    </div>
+
+                    <div class ="mb-3 	text-danger ">
+                        <label  for ="weight ">AĞIRLIK</label>
+                        <div class="form-group">
+                            <input type="text" id="weight" formControlName="weight" class="form-control"
+                            placeholder="ağırlık .." />
+
+                        </div>
+
+                    </div>
+
+                    <div class ="mb-3 	text-danger ">
+                        <label  for ="diseaseId">HASTALIK SEÇ</label>
+                        <select class="form-control" formControlName="diseaseId">
+                            <option  *ngFor="let disease of diseases"  placeholder="hastalık" [ngValue]="disease.diseaseId">{{disease.diseaseName}}</option>
+
+                        </select>
+
+                    </div>
+                    <div class ="mb-3 	text-danger">
+                        <label  for ="dietId">DİYET SEÇ</label>
+                        <select class="form-control" formControlName="dietId">
+                            <option  *ngFor="let diet of diets"  placeholder="diyet" [ngValue]="diet.dietId">{{diet.dietName}}</option>
+
+                        </select>
+
+                    </div>
+
+
+
+
+
+                </form>
+
+            </div>
+            <div class="card-footer">
+                <button  class="btn btn-fill  btn-warning " (click) ="add()">Ekle</button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+

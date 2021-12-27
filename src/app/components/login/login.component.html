@@ -1,0 +1,44 @@
+
+
+<body class="text-center">
+
+    <main class="form-signin">
+      <form [formGroup]="loginForm" >
+        <!-- <img class="mb-4"
+         src="https://freepikpsd.com/wp-content/uploads/2019/10/login-logo-png-6.png"
+         alt="" width="72"
+         height="57"> -->
+        <h1 class="h3 mb-3 fw-normal">Giriş Yap</h1>
+
+        <div class="form-floating mt-4">
+          <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"/>
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mt-4">
+          <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"/>
+          <label for="floatingPassword">Parola</label>
+        </div>
+
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox"  value="remember-me"> Remember me
+          </label>
+        </div>
+        <button style="background-color: #212121" class="w-100 btn btn-lg btn-primary"  (click)="login()"  >
+          Giriş Yap
+        </button>
+        <a href="#" routerLink="/register" class="text-warning">Hesabın Yok mu ?</a>
+
+      </form>
+     </main>
+    </body>

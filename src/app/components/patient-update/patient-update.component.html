@@ -1,0 +1,46 @@
+
+<button  id="inputButton"  type="button" class=" btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Güncelle
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" >Güncelle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" >
+          <div class="card-body">
+            <form [formGroup]="patientUpdateForm">
+              <div class="mb-3">
+                <label for="dietId">Diyet seç</label>
+  
+                <div class="col-sm-12">
+                  <select class="form-control" formControlName="dietId">
+                    <option *ngFor="let diet of diets" selected="patientForUpdate.dietId" [ngValue]="diet.dietId">{{diet.dietName}}</option>
+                  </select>
+                </div>
+  
+              </div>
+              <div class="mb-3">
+                <label for="diseaseId">Hastalık seç</label>
+                    <div class="col-sm-12">
+                  <select class="form-control" formControlName="diseaseId">
+                    <option *ngFor="let disease of diseases" selected="patientForUpdate.diseaseId" [ngValue]="disease.diseaseId">{{disease.diseaseName}}</option>
+                  </select>
+                    </div>
+  
+              </div>
+            
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Kapat</button>
+          <button (click)="update()" type="button" class="btn btn-success"  data-bs-dismiss="modal">Değişiklikleri kaydet</button>
+        </div>
+      </div>
+    </div>
+  </div>
